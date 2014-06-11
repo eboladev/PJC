@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sounds/intruderAlarm.mp3</file>
+        <file>sounds/intruderAlarm2.mp3</file>
+    </qresource>
+</RCC>
