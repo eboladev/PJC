@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     motionsensor.cpp \
     rfidsensor.cpp \
     contactron.cpp \
-    map.cpp
+    map.cpp \
+    keypoint.cpp
 
 HEADERS  += mainwindow.h \
     mobileobject.h \
@@ -41,7 +42,8 @@ HEADERS  += mainwindow.h \
     motionsensor.h \
     rfidsensor.h \
     contactron.h \
-    map.h
+    map.h \
+    keypoint.h
 
 FORMS    += mainwindow.ui
 

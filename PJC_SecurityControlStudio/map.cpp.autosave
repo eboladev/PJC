@@ -36,12 +36,7 @@ Map::Map()
     kps[29] = new KeyPoint(200, 270);
     kps[30] = new KeyPoint(70, 270);\
     kps[31] = new KeyPoint(70, 425);
-    /*
-    kp1 = new KeyPoint(70, 215);
-    kp2 = new KeyPoint(560, 215);
-    kp3 = new KeyPoint(560, 475);
-    kp4 = new KeyPoint(70, 475);
-*/
+
     kps[0]->addConnection(kps[1]);
     kps[1]->addConnection(kps[0]);
     kps[1]->addConnection(kps[2]);
@@ -114,12 +109,6 @@ Map::Map()
     kps[30]->addConnection(kps[31]);
     kps[31]->addConnection(kps[30]);
     kps[31]->addConnection(kps[28]);
-
-    /*kp2->addConnection(kp1);
-    kp2->addConnection(kp3);
-    kp3->addConnection(kp2);
-    kp3->addConnection(kp4);
-    kp4->addConnection(kp3);*/
 
     //horizontal paths
     addPathPoints(70, 215, 560, 215);

@@ -24,6 +24,13 @@ MainWindow::~MainWindow()
 void MainWindow::refresh(){
     myRobot->pathPlanning();
     myRobot->move();
+    
+    myEmployee->pathPlanning();
+    myEmployee->move();
+    
+    myIntruder->pathPlanning();
+    myIntruder->move();
+    
     qDebug()<<myRobot->currentPositionPoint.x()<<"  "<<myRobot->currentPositionPoint.y();
     //refresh robot
     //refresh worker
@@ -38,9 +45,18 @@ void MainWindow::refresh(){
 void MainWindow::startSimulation(){
     myMap = new Map;
     myRobot = new Robot;
+    myIntruder = new Intruder;
+    myEmployee = new Employee;
+    
     myRobot->myKeyPoint = myMap->kps[0];
+    myIntruder->myKeyPoint = myMap->kps[30];
+    myEmployee->myKeyPoint = myMap->kps[16];
+    
     myScene->addItem(myMap);
     myScene->addItem(myRobot);
+    myScene->addItem(myIntruder);
+    myScene->addItem(myEmployee);
+    
     myTimer = new QTimer(this);
     connect(myTimer, SIGNAL(timeout()), this, SLOT(refresh()));
     myTimer->start(10); //30ms

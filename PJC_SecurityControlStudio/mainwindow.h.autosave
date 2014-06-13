@@ -5,6 +5,8 @@
 #include <QtCore>
 #include "map.h"
 #include "robot.h"
+#include "intruder.h"
+#include "employee.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +32,9 @@ private:
     Ui::MainWindow *ui;
     Map *myMap;
     Robot *myRobot;
+    Intruder *myIntruder;
+    Employee *myEmployee;
+    
     QGraphicsScene *myScene;
 
     

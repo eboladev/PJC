@@ -2,19 +2,31 @@
 #define MOBILEOBJECT_H
 
 #include <QObject>
+#include <QPainter>
+#include <QGraphicsItem>
+#include <QGraphicsScene>
+#include <QVector>
+#include <QtCore>
+//#include "mainwindow.h"
+#include "keypoint.h"
 
-class MobileObject : public QObject
+
+class MobileObject : public QObject, public QGraphicsItem
 {
     Q_OBJECT
 public:
     explicit MobileObject(QObject *parent = 0);
     void pathPlanning();
+    void move();
     void setSpeed();
+    QPoint currentPositionPoint;
+    QPoint destinationPoint;
+    QVector <QPoint> pathPoints;
+    KeyPoint *myKeyPoint;
+    bool changeDestinationFlag;
 
 private:
     bool isIdOwner;
-    double posX;
-    double posY;
     double speed;
     int mobileObjectID;
 
