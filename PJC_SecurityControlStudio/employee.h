@@ -8,9 +8,16 @@ class Employee : public MobileObject
 public:
     Employee();
 
+
 private:
-    void sendData();
     void escape();
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+    QPixmap workerUp;
+    QPixmap workerDown;
+    QPixmap workerLeft;
+    QPixmap workerRight;
 };
 
 #endif // EMPLOYEE_H

@@ -7,7 +7,6 @@
 #include <QGraphicsScene>
 #include <QVector>
 #include <QtCore>
-//#include "mainwindow.h"
 #include "keypoint.h"
 
 
@@ -18,21 +17,16 @@ public:
     explicit MobileObject(QObject *parent = 0);
     void pathPlanning();
     void move();
-    void setSpeed();
     QPoint currentPositionPoint;
     QPoint destinationPoint;
     QVector <QPoint> pathPoints;
     KeyPoint *myKeyPoint;
     bool changeDestinationFlag;
+    bool isIdOwner;
+    int movingDirection;
 
 private:
-    bool isIdOwner;
-    double speed;
-    int mobileObjectID;
 
-signals:
-
-public slots:
 
 };
 

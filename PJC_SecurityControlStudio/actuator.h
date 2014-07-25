@@ -2,20 +2,22 @@
 #define ACTUATOR_H
 
 #include <QObject>
+#include <QGraphicsItem>
+#include <QPainter>
+#include <QVector>
+#include <QGraphicsScene>
 
 class Actuator : public QObject
 {
     Q_OBJECT
 public:
     explicit Actuator(QObject *parent = 0);
-    void getData(int address, int dataRegister);
+    int actuatorAddress;
+    int actuatorData;
 
 private:
-    int actuatorID;
 
-signals:
 
-public slots:
 
 };
 

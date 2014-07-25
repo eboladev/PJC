@@ -7,7 +7,7 @@ Map::Map()
     kps[0] = new KeyPoint(70, 215);
     kps[1] = new KeyPoint(270, 215);
     kps[2] = new KeyPoint(270, 165);
-    kps[3] = new KeyPoint(720, 80);
+    kps[3] = new KeyPoint(270, 80);
     kps[4] = new KeyPoint(70, 80);
     kps[5] = new KeyPoint(70, 165);
     kps[6] = new KeyPoint(560, 215);
@@ -15,33 +15,28 @@ Map::Map()
     kps[8] = new KeyPoint(560, 80);
     kps[9] = new KeyPoint(340, 80);
     kps[10] = new KeyPoint(340, 165);
-    kps[11] = new KeyPoint(560, 475);
+    kps[11] = new KeyPoint(560, 472);
     kps[12] = new KeyPoint(560, 525);
-    kps[13] = new KeyPoint(615, 475);
-    kps[14] = new KeyPoint(730, 475);
+    kps[13] = new KeyPoint(615, 472);
+    kps[14] = new KeyPoint(730, 472);
     kps[15] = new KeyPoint(730, 80);
     kps[16] = new KeyPoint(615, 80);
-    kps[17] = new KeyPoint(440, 475);
+    kps[17] = new KeyPoint(440, 472);
     kps[18] = new KeyPoint(440, 525);
     kps[19] = new KeyPoint(340, 525);
     kps[20] = new KeyPoint(440, 425);
     kps[21] = new KeyPoint(440, 270);
-    kps[22] = new KeyPoint(340, 270);
-    kps[23] = new KeyPoint(340, 425);
-    kps[24] = new KeyPoint(200, 475);
+    kps[22] = new KeyPoint(341, 270);
+    kps[23] = new KeyPoint(341, 425);
+    kps[24] = new KeyPoint(200, 472);
     kps[25] = new KeyPoint(200, 525);
     kps[26] = new KeyPoint(70, 525);
-    kps[27] = new KeyPoint(70, 475);
+    kps[27] = new KeyPoint(70, 472);
     kps[28] = new KeyPoint(200, 425);
     kps[29] = new KeyPoint(200, 270);
     kps[30] = new KeyPoint(70, 270);\
     kps[31] = new KeyPoint(70, 425);
-    /*
-    kp1 = new KeyPoint(70, 215);
-    kp2 = new KeyPoint(560, 215);
-    kp3 = new KeyPoint(560, 475);
-    kp4 = new KeyPoint(70, 475);
-*/
+
     kps[0]->addConnection(kps[1]);
     kps[1]->addConnection(kps[0]);
     kps[1]->addConnection(kps[2]);
@@ -103,7 +98,7 @@ Map::Map()
     kps[24]->addConnection(kps[27]);
     kps[25]->addConnection(kps[24]);
     kps[25]->addConnection(kps[26]);
-    kps[26]->addConnection(kps[26]);
+    kps[26]->addConnection(kps[25]);
     kps[27]->addConnection(kps[24]);
     kps[28]->addConnection(kps[24]);
     kps[28]->addConnection(kps[29]);
@@ -115,18 +110,12 @@ Map::Map()
     kps[31]->addConnection(kps[30]);
     kps[31]->addConnection(kps[28]);
 
-    /*kp2->addConnection(kp1);
-    kp2->addConnection(kp3);
-    kp3->addConnection(kp2);
-    kp3->addConnection(kp4);
-    kp4->addConnection(kp3);*/
-
     //horizontal paths
-    addPathPoints(70, 215, 560, 215);
-    addPathPoints(70, 470, 560, 470);
+    //addPathPoints(70, 215, 560, 215);
+    //addPathPoints(70, 470, 560, 470);
 
     //vertical paths
-    addPathPoints(560, 215, 560, 530);
+    //addPathPoints(560, 215, 560, 530);
 }
 
 QRectF Map::boundingRect() const
@@ -141,7 +130,7 @@ void Map::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidg
     myQPen.setWidth(2);
     painter->setPen(myQPen);
 }
-
+/*
 void Map::addPathPoints(int x1, int y1, int x2, int y2)
 {
     QPoint p;
@@ -179,3 +168,4 @@ void Map::addPathPoints(int x1, int y1, int x2, int y2)
         }
     }
 }
+*/

@@ -2,21 +2,24 @@
 #define SENSOR_H
 
 #include <QObject>
+#include <QPoint>
+#include <QDebug>
+//#include "system.h"
+
 
 class Sensor : public QObject
 {
     Q_OBJECT
 public:
     explicit Sensor(QObject *parent = 0);
-    void sendData(int address, int dataRegister);
-
+    int sensorAddress;
+    int sensorData;
 private:
-    int sensorID;
-    void getReading();
 
 signals:
 
 public slots:
+    void sendData(int address, int dataRegister);
 
 };
 

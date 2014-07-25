@@ -9,16 +9,35 @@ MobileObject::MobileObject(QObject *parent) :
 void MobileObject::pathPlanning(){
     if(changeDestinationFlag)
     {
-        qDebug()<<"0";
+        //qDebug()<<"executing pathPlanning";
         std::random_shuffle(myKeyPoint->pnt_keyPoints.begin(),
                             myKeyPoint->pnt_keyPoints.end());
-        qDebug()<<"1";
         myKeyPoint = myKeyPoint->pnt_keyPoints.first();
-        qDebug()<<"2";
         changeDestinationFlag = 0;
-        qDebug()<<"3";
-    }
-    destinationPoint =  myKeyPoint->p;
+        destinationPoint =  myKeyPoint->p;
+
+        if(currentPositionPoint.x() < destinationPoint.x())
+        {
+            movingDirection = 2; //left
+        }
+
+        else if(currentPositionPoint.x() > destinationPoint.x())
+        {
+            movingDirection = 1; //right
+        }
+
+        else if(currentPositionPoint.y() < destinationPoint.y())
+        {
+            movingDirection = 3; //up
+        }
+
+        else if(currentPositionPoint.y() > destinationPoint.y())
+        {
+            movingDirection = 0; //down
+        }
+
+        //qDebug()<<"movingDirection = "<< movingDirection;
+     }
 }
 
 void MobileObject::move(){
@@ -45,6 +64,3 @@ void MobileObject::move(){
     }
 }
 
-void MobileObject::setSpeed(){
-
-}

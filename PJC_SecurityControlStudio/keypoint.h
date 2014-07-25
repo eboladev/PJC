@@ -13,7 +13,7 @@ public:
     QVector <KeyPoint*> pnt_keyPoints;
 
     void addConnection(KeyPoint *point);
-    void deleteConnection();
+    void deleteConnection(KeyPoint *point);
 };
 
 #endif // KEYPOINT_H

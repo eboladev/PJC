@@ -11,22 +11,16 @@ class Robot : public MobileObject
 {
 public:
     Robot();
-    void sendData();
-    void catchIntruder();
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-
-    int robotDirection;
-
+    void faceRecognition(MobileObject *intruder);
+    bool intruderDetected;
 
 private:
-    bool intruderDetected;
-    void faceRecognition();
-
     QPixmap robotUp;
     QPixmap robotDown;
     QPixmap robotLeft;
     QPixmap robotRight;
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };
 
 #endif // ROBOT_H

@@ -8,12 +8,13 @@
         <file>images/workerDown.png</file>
         <file>images/robot1.png</file>
         <file>images/intruderUp.png</file>
-        <file>images/intruderRight.pnd</file>
+        <file>images/intruderRight.png</file>
         <file>images/intruderLeft.png</file>
         <file>images/intruderDown.png</file>
         <file>images/intruder.png</file>
         <file>images/doors.jpeg</file>
         <file>images/door.png</file>
         <file>images/buildingMap2.png</file>
+        <file>images/black.png</file>
     </qresource>
 </RCC>

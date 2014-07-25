@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
 
 TARGET = PJC_SecurityControlStudio
 TEMPLATE = app
@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     rfidsensor.cpp \
     contactron.cpp \
     map.cpp \
-    keypoint.cpp
+    keypoint.cpp \
+    systemsecurity.cpp
 
 HEADERS  += mainwindow.h \
     mobileobject.h \
@@ -43,7 +44,8 @@ HEADERS  += mainwindow.h \
     rfidsensor.h \
     contactron.h \
     map.h \
-    keypoint.h
+    keypoint.h \
+    systemsecurity.h
 
 FORMS    += mainwindow.ui
 

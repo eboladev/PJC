@@ -5,6 +5,12 @@
 #include <QtCore>
 #include "map.h"
 #include "robot.h"
+#include "intruder.h"
+#include "employee.h"
+#include "systemsecurity.h"
+#include "motionsensor.h"
+#include "lightingswitch.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -20,16 +26,20 @@ public:
     void startSimulation();
     void endSimulation();
     QTimer *myTimer;
+    QTimer *myTimer2;
 
 private slots:
     void on_startButton_clicked();
     void on_cancelButton_clicked();
     void refresh();
+    void refresh2();
 
 private:
     Ui::MainWindow *ui;
     Map *myMap;
-    Robot *myRobot;
+    Intruder *myIntruder;
+    SystemSecurity *mySystem;
+    bool startFlag;
     QGraphicsScene *myScene;
 
     

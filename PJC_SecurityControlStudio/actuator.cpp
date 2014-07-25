@@ -5,9 +5,5 @@ Actuator::Actuator(QObject *parent) :
 {
 }
 
-void Actuator::getData(int address, int dataRegister)
-{
-
-}
 
 
